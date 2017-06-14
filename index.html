@@ -1,63 +1,25 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Chat IO</title>
-	<style>
-		body{
-			background: #f9f9f9;
-		}
-
-		#container{
-			width: 700px;
-			margin: 0 auto;
-		}
-
-		#chatWindow{
-			height: 300px;
-		}
-
-		#mainWrapper{
-			display: none;
-		}
-
-		#chatWrapper{
-			float: left;
-			border: 1px #ccc solid;
-			border-radius: 10px;
-			background: #f4f4f4;
-			padding: 10px;
-		}
-
-		#userWrapper{
-			float: left;
-			border: 1px #ccc solid;
-			border-radius: 10px;
-			background: #f4f4f4;
-			padding: 10px;
-			margin-left: 20px;
-			width: 150px;
-			max-height: 200px;
-		}
-
-		#namesWrapper{
-			float: left;
-			border: 1px #ccc solid;
-			border-radius: 10px;
-			background: #f4f4f4;
-			padding: 10px;
-			margin-left: 20px;
-		}
-
-		input{
-			height: 30px;
-			border: solid 1px #ccc;
-		}
-	</style>
+	<title>iKori</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+	<nav id="navbar" class="navbar">
+	  <div class="container-fluid">
+	    <div class="navbar-header">
+	      <a class="navbar-brand" href="/">i<span>Kori</span></a>
+	    </div>
+	    <ul class="nav navbar-nav navbar-right">
+	      <li class="navHowTo"><a href="#">How To</a></li>
+	      <li class="navContact"><a href="#">Contact</a></li>
+	    </ul>
+	  </div>
+	</nav>
 	<div id="container">
 		<div id="namesWrapper">
-			<h2>Chat IO</h2>
+			<h2>Welcome to iKori.io</h2>
 			<p>Create Username:</p>
 			<div id="error"></div>
 			<form id="usernameForm">
@@ -67,7 +29,7 @@
 		</div>
 
 		<div id="mainWrapper">
-			<h2>ChatIO</h2>
+			<h2>iKori.io</h2>
 			<div id="chatWrapper">
 				<div id="chatWindow"></div>
 				<form id="messageForm">
@@ -81,6 +43,14 @@
 			</div>
 		</div>
 	</div>
+	<footer class="footer-fixed">
+		<ul class="footer">
+			<li><p class="copyright">Copyright &copy; Eric Calabrese 2017</p></li>
+			<li><a href="https://github.com/ericcalabrese"><img class="footerSize" src="img/github.png"></li></a>
+			<li><a href="https://www.linkedin.com/in/eric-calabrese-b6478557/"><img class="footerSize" src="img/linkedin.png"></li></a>
+			
+		</ul> 
+	</footer>
 
 	<script src="http://code.jquery.com/jquery-latest.min.js"></script>
 	<script src="/socket.io/socket.io.js"></script>

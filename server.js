@@ -7,6 +7,8 @@ var express = require('express'),
 server.listen(process.env.PORT || 3000);
 console.log('Sever Running...');
 
+app.use(express.static('public'));
+
 app.get('/', function(req, res){
 	res.sendFile(__dirname + '/index.html');
 });

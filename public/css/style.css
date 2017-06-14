@@ -1,0 +1,87 @@
+body{
+	background: #f9f9f9;
+}
+a{
+	color: black;
+}
+.navbar{
+	background-color: white;
+	border-bottom: 1px solid black;
+}	
+.navContact{
+	margin-left: -18%;
+}
+.navHowTo{
+	margin-right: 10%;
+}
+span{
+	color: red;
+}
+#container{
+	width: 700px;
+	margin: 0 auto;
+}
+#chatWindow{
+	height: 300px;
+}
+#mainWrapper{
+	display: none;
+}
+#chatWrapper{
+	float: left;
+	border: 1px #ccc solid;
+	border-radius: 10px;
+	background: #f4f4f4;
+	padding: 10px;
+}
+#userWrapper{
+	float: left;
+	border: 1px #ccc solid;
+	border-radius: 10px;
+	background: #f4f4f4;
+	padding: 10px;
+	margin-left: 20px;
+	width: 150px;
+	max-height: 200px;
+}
+#namesWrapper{
+	float: left;
+	border: 1px #ccc solid;
+	border-radius: 10px;
+	background: #f4f4f4;
+	padding: 10px;
+/*	margin-left: 20px;
+*/
+	margin: 20% 25%;
+}
+input{
+	height: 30px;
+	border: solid 1px #ccc;
+}
+.footer-fixed{
+	position: fixed;
+	bottom: 0;
+}
+.footer {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+	margin: 0;    
+	width: 100%;
+    color: black;
+    z-index: 1;
+    position: relative;
+    padding: 2%;
+}
+.copyright{
+	text-align: center;
+}
+.footerSize {
+    width: 20%;
+    bottom: 5%;
+    right: 100%;
+    position: absolute;
+	margin: auto;
+}
