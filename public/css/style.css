@@ -1,57 +1,84 @@
 body{
-	background: #f9f9f9;
+	background: #333333;
+}
+h2, li, input, p{
+	font-family: "Comic Sans MS", cursive, sans-serif;
 }
 a{
 	color: black;
 }
-.navbar{
-	background-color: white;
-	border-bottom: 1px solid black;
-}	
-.navContact{
-	margin-left: -18%;
+a:hover{
+	text-decoration: none;
 }
-.navHowTo{
-	margin-right: 10%;
+.navList{
+	list-style-type: none;
+   	display: flex;
+   	justify-content: flex-start;
+    top: 0;
+    width: 100%;
+    color: black;
+    z-index: 1;
+    margin-bottom: 5%;
+    background-color: #f2f2f2;
+	/*background-color: #f9f9f9;*/
+/*	border-bottom: 1px solid black;*/
+}	
+.navPosition{
+	position: relative;
+}
+#contact{
+	left: 70%;
+}
+#howTo{
+	left: 60%; 	
 }
 span{
-	color: red;
+	color: #3333ff;
+}
+#btn{
+	background-color: #3333ff;
+	color: white;
+	border-radius: 5px;
+}
+#userName{
+	border-radius: 5px;
 }
 #container{
 	width: 700px;
 	margin: 0 auto;
+
 }
 #chatWindow{
-	height: 300px;
+	height: 550px;
+	overflow-y: auto;
 }
 #mainWrapper{
 	display: none;
+	margin-top: -7%;
 }
 #chatWrapper{
 	float: left;
 	border: 1px #ccc solid;
 	border-radius: 10px;
-	background: #f4f4f4;
+	background: #f2f2f2;
 	padding: 10px;
 }
 #userWrapper{
 	float: left;
 	border: 1px #ccc solid;
 	border-radius: 10px;
-	background: #f4f4f4;
+	background: #f2f2f2;
 	padding: 10px;
 	margin-left: 20px;
 	width: 150px;
-	max-height: 200px;
+	max-height: 400px;
 }
 #namesWrapper{
 	float: left;
 	border: 1px #ccc solid;
 	border-radius: 10px;
-	background: #f4f4f4;
+	background: #f2f2f2;
 	padding: 10px;
-/*	margin-left: 20px;
-*/
 	margin: 20% 25%;
 }
 input{
@@ -61,27 +88,29 @@ input{
 .footer-fixed{
 	position: fixed;
 	bottom: 0;
+	width: 100%;
 }
 .footer {
     list-style-type: none;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
-    background-color: white;
+    background-color: #f2f2f2;
 	margin: 0;    
 	width: 100%;
     color: black;
     z-index: 1;
     position: relative;
-    padding: 2%;
-}
-.copyright{
-	text-align: center;
+    padding: 2%;   
 }
 .footerSize {
-    width: 20%;
-    bottom: 5%;
-    right: 100%;
-    position: absolute;
-	margin: auto;
+	position: absolute;
+    width: 4%;
+    bottom: 20%;
+}
+#gh{
+	left: 35%;
+}
+#li{
+	left: 60%;
 }

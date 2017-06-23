@@ -6,16 +6,12 @@
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-	<nav id="navbar" class="navbar">
-	  <div class="container-fluid">
-	    <div class="navbar-header">
-	      <a class="navbar-brand" href="/">i<span>Kori</span></a>
-	    </div>
-	    <ul class="nav navbar-nav navbar-right">
-	      <li class="navHowTo"><a href="#">How To</a></li>
-	      <li class="navContact"><a href="#">Contact</a></li>
-	    </ul>
-	  </div>
+	<nav>
+		<ul class="navList">
+			<li><a href="/"><h2>i<span>Komi</span></h2></a></li>
+			<li class="navPosition" id="howTo"><a href="/"><h2>How To</h2></a></li>
+			<li class="navPosition" id="contact"><a href="/"><h2>Contact</h2></a></li>
+		</ul>
 	</nav>
 	<div id="container">
 		<div id="namesWrapper">
@@ -23,21 +19,19 @@
 			<p>Create Username:</p>
 			<div id="error"></div>
 			<form id="usernameForm">
-				<input type="text" size="35" id="username">
-				<input type="submit" value="Submit">
+				<input id="userName" type="text" size="30" id="username">
+				<input id="btn" type="submit" value="Submit">
 			</form>
 		</div>
 
 		<div id="mainWrapper">
-			<h2>iKori.io</h2>
 			<div id="chatWrapper">
 				<div id="chatWindow"></div>
 				<form id="messageForm">
 					<input type="text" size="35" id="message" placeholder="Say Something...">
-					<input type="submit" value="Submit">
+					<input id="btn" type="submit" value="Submit">
 				</form>
 			</div>
-
 			<div id="userWrapper">
 				<div id="users"></div>
 			</div>
@@ -45,15 +39,16 @@
 	</div>
 	<footer class="footer-fixed">
 		<ul class="footer">
-			<li><p class="copyright">Copyright &copy; Eric Calabrese 2017</p></li>
-			<li><a href="https://github.com/ericcalabrese"><img class="footerSize" src="img/github.png"></li></a>
-			<li><a href="https://www.linkedin.com/in/eric-calabrese-b6478557/"><img class="footerSize" src="img/linkedin.png"></li></a>
-			
+			<li><a href="https://github.com/ericcalabrese"><img class="footerSize" id="gh" src="img/github.png"></li></a>
+			<li><p>Copyright &copy; Eric Calabrese 2017</p></li>
+			<li><a href="https://www.linkedin.com/in/eric-calabrese-b6478557/"><img class="footerSize" id="li" src="img/linkedin.png"></li></a>	
 		</ul> 
 	</footer>
 
-	<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+	<!-- <script src="http://code.jquery.com/jquery-latest.min.js"></script> -->
+	<script src="js/jquery.min.js"></script>
 	<script src="/socket.io/socket.io.js"></script>
+	<script src="js/chat.js"></script>
 	<script>
 		$(function(){
 			var socket = io.connect();
@@ -89,10 +84,16 @@
 				e.preventDefault();
 				socket.emit('send message', $message.val());
 				$message.val('');
+
+
+
 			});
 
 			socket.on('new message', function(data){
 				$chat.append('<strong>'+data.user+'</strong>: '+data.msg+'<br>');
+
+				$chat.scrollTop($chat[0].scrollHeight);
+				console.log("eric");
 			});
 		});
 	</script>
