@@ -2,7 +2,7 @@ body{
 	background: #333333;
 }
 h2, li, input, p{
-	font-family: "Comic Sans MS", cursive, sans-serif;
+	font-family: "Arial Black", Gadget, sans-serif
 }
 a{
 	color: black;
@@ -40,13 +40,13 @@ span{
 	color: white;
 	border-radius: 5px;
 }
-#userName{
+.text{
 	border-radius: 5px;
 }
 #container{
 	width: 700px;
 	margin: 0 auto;
-
+	position: relative;
 }
 #chatWindow{
 	height: 550px;
@@ -57,22 +57,25 @@ span{
 	margin-top: -7%;
 }
 #chatWrapper{
-	float: left;
 	border: 1px #ccc solid;
 	border-radius: 10px;
 	background: #f2f2f2;
 	padding: 10px;
 	width: 700px;
+	position: absolute;
+	top: 30%;
+	right: 0%;
 }
 #userWrapper{
-	float: left;
 	border: 1px #ccc solid;
 	border-radius: 10px;
 	background: #f2f2f2;
 	padding: 10px;
-	margin-left: 100px;
 	width: 150px;
 	max-height: 400px;
+	position: absolute;
+	top: 30%;
+	left: -40%;
 }
 #namesWrapper{
 	float: left;
@@ -114,4 +117,85 @@ input{
 }
 #li{
 	left: 60%;
+}
+@media only screen and (max-width: 768px) {
+	.navList h2{
+		font-size: 150%;
+	}
+	#contact{
+		left: 55%;
+	}
+	#howTo{
+		left: 45%; 	
+	}
+	#chatWindow{
+		height: 470px;
+	}
+	#chatWrapper{
+		width: 550px;
+		top: 40px;
+		right: 0;
+	}
+	#userWrapper{
+		 top: 40px;
+		 left: -8px;
+		 width: 125px;
+	}
+	#messageForm input {
+		max-width: 455px;
+	}
+	.footerSize{
+		width: 5%;
+	}
+	#gh{
+		left: 27%;
+	}
+	#li{
+		left: 68%;
+	}
+}
+@media only screen and (max-width: 375px) {
+	.navList h2{
+		font-size: 15px;
+		margin: 10px;
+	}
+  	#contact{
+		left: 25%;
+	}
+	#howTo{
+		left: 15%; 	
+	}
+	#namesWrapper{
+		padding: 10px;
+		margin: 20% 2%;
+	}
+	#chatWindow{
+		height: 500px;
+	}
+	#chatWrapper{
+		width: 250px;
+		top: 60px;
+		right: 355px;
+	}
+	#userWrapper{
+		 top: 60px;
+		 left: 8px;
+		 width: 75px;
+	}
+	#messageForm input {
+		max-width: 155px;
+	}
+	.footer p{
+		font-size: 12px;
+		margin-bottom: 0;
+	}
+	.footerSize{
+		width: 8%;
+	}
+	#gh{
+		left: 12%;
+	}
+	#li{
+		left: 80%;
+	}
 }
