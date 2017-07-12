@@ -1,7 +1,7 @@
 var express = require('express'),
 	app = express(),
 	server = require('http').createServer(app),
-	io = require('socket.io').listen(server);
+	io = require('socket.io')(server);
 	usernames = [];
 
 server.listen(process.env.PORT || 3000);
@@ -38,11 +38,17 @@ io.sockets.on('connection', function(socket){
 	});
 
 	socket.on('disconnect', function(data){
+		console.log("disconnected");
+		console.log("eric" + socket.username);
+
+		
 		if(!socket.username){
 			return;
 		}
 
-		usernames.splice(username.indexOf(socket.username), 1);
+		usernames.splice(usernames.indexOf(socket.username), 1);
+		
+		
 		updateUsernames();
 	});
 });
