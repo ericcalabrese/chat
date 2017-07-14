@@ -4,15 +4,45 @@
 	<title>iKori</title>
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/style.css">
+
 </head>
 <body>
 	<nav>
 		<ul class="navList">
-			<li><a href="/"><h2>i<span>Kori</span>.io</h2></a></li>
-			<li class="navPosition" id="howTo"><a href="/"><h2>How To</h2></a></li>
-			<li class="navPosition" id="contact"><a href="mailto:calabrese.eric@gmail.com"><h2>Contact</h2></a></li>
+			<li>
+				<a href="/"><h2>i<span>Kori</span>.io</h2></a>
+			</li>
+			<li class="navPosition" id="howTo">
+				<a data-toggle="modal" data-target="#myModal"><h2>How To</h2></a>
+			</li>
+			<li class="navPosition" id="contact">
+				<a href="mailto:calabrese.eric@gmail.com"><h2>Contact</h2></a>
+			</li>
 		</ul>
 	</nav>
+
+	<div id="myModal" class="modal fade" role="dialog">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h4 class="modal-title">How to use iKori</h4>
+				</div>
+				<div class="modal-body">
+	                <form onSubmit={this.onSubmit}>
+						<div>
+							<input class="box" name="title" type="text" placeholder="Add a title..."/>
+						</div>
+						<div>
+							<textarea class="box" name="body" placeholder="Write your post..."></textarea>
+						</div>
+						<button class="btn btn-primary">Send</button>
+					</form>	    
+				</div>
+			</div>
+		</div>
+	</div>
+
 	<div id="container">
 		<div id="namesWrapper">
 			<h2>Welcome to iKori.io</h2>
@@ -31,7 +61,7 @@
 			<div id="chatWrapper">
 				<div id="chatWindow"></div>
 				<form id="messageForm">
-					<input class="text" type="text" size="75" id="message" placeholder="Say Something...">
+					<input class="text" type="text" id="message" placeholder="Say Something...">
 					<input id="btn" type="submit" value="Submit">
 				</form>
 			</div>
