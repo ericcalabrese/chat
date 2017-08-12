@@ -10,6 +10,9 @@ a{
 a:hover{
 	text-decoration: none;
 }
+nav h2{
+	font-size: 180%;
+}
 .navList{
 	list-style-type: none;
    	display: flex;
@@ -43,13 +46,20 @@ span{
 .text{
 	border-radius: 5px;
 }
+.howTo{
+	list-style-type: none;
+	text-align: center;
+}
+#howToHeader{
+	text-align: center;
+}
 #container{
 	width: 700px;
 	margin: 0 auto;
 	position: relative;
 }
 #chatWindow{
-	height: 550px;
+	height: 525px;
 	overflow-y: auto;
 }
 #mainWrapper{
